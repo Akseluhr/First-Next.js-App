@@ -1,28 +1,20 @@
-import dynamic from "next/dynamic";
-import { useState } from "react";
-import Link from 'next/link';
 import Head from 'next/head';
-
-const HelloComponent = dynamic(() => import("../components/hello"), {
-  loading: () => <b>Loading...</b>,
-});
+import Layout, { siteTitle } from '../components/layout';
+import utilStyles from '../styles/utils.module.css';
 
 export default function Home() {
-  const [show, setShow] = useState(false);
   return (
-    <div>
+    <Layout home>
       <Head>
-        <title>Homep</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>{siteTitle}</title>
       </Head>
-      Home component
-      <div>{show ? <HelloComponent /> : null}</div>
-      <div>
-        <button onClick={() => setShow((pV) => !pV)}>{!show ? 'Show' : 'Hide'}</button>
-      </div>
-      <button> 
-        <Link href="/posts/first-post">Post Here</Link>
-      </button>
-    </div>
+      <section className={utilStyles.headingMd}>
+        <p>[Your Self Introduction]</p>
+        <p>
+          (This is a sample website - you’ll be building a site like this on{' '}
+          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
+        </p>
+      </section>
+    </Layout>
   );
 }
