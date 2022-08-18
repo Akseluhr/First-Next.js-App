@@ -9,7 +9,11 @@ export default function FirstPost() {
         <title>First Post</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* Third party sources is added here with <Script src='' /> tag from */}
+      {/* Third party sources is added here with <Script src='' /> tag from
+        params: 
+            strategy = when script should load 
+            e.g. lazyOnload 
+            or onLoad for immediate loading*/}
 
       <h1>First Post</h1>
       <Image
