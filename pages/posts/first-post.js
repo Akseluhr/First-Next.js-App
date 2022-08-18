@@ -8,8 +8,9 @@ export default function FirstPost() {
       <Head>
         <title>First Post</title>
         <link rel="icon" href="/favicon.ico" />
-        {/* Third party sources is added here with <script src='' /> tag */}
       </Head>
+      {/* Third party sources is added here with <Script src='' /> tag from */}
+
       <h1>First Post</h1>
       <Image
         src='/images/aki GH.png'
